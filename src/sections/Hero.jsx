@@ -1,8 +1,7 @@
 import React, {useState} from "react";
-import Button from "../components/button";
+import Button from "../components/Button"
 import { arrowRight } from "../assets/icons";
 import { statistics } from "../constants";
-import { bigShoe1, thumbnailBackground } from "../assets/images";
 import { shoes } from "../constants";
 import ShoeThumbnail from "../components/ShoeThumbnail";
 const Hero = () => {
