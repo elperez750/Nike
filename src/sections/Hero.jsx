@@ -22,13 +22,13 @@ const Hero = () => {
     >
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:paddingx pt-28 z-10">
         <p className="text-coral-red text-3xl mb-10">Our Summer Collection</p>
-        <h1 className="text-8xl font-bold">
-          <span className="whitespace-nowrap">The New Arrival</span>
+        <h1 className="text-8xl font-bold max-md:text-4xl ">
+          <span className="whitespace-nowrap ">The New Arrival</span>
           <br />
           <span className="text-coral-red">Nike </span>
           Shoes
         </h1>
-        <p className="text-2xl font-light mt-10 mb-10">
+        <p className="text-2xl font-light mt-10 mb-10 max-md:text-xl">
           Discover stylish Nike Arrivals, quality comfort, and innovation for
           your active life.
         </p>
