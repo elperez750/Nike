@@ -1,17 +1,22 @@
 import React from "react";
 
 const ShoeThumbnail = ({ imageSrc, active }) => {
-  const baseStyles =
-    "relative bg-cover bg-center h-48 w-48 flex justify-center items-center space-x-5 rounded-lg cursor-pointer";
   return (
     <div
-      className={
-        active
-          ? `${baseStyles} border-2 border-coral-red shadow-lg`
-          : `${baseStyles} border-2 border-black shadow-lg`
-      }
+      className={`
+        relative w-24 h-24 sm:w-32 sm:h-32 flex justify-center items-center 
+        rounded-xl cursor-pointer transition-all duration-300 ease-in-out bg-cover bg-card bg-primary bg-center
+        ${active 
+          ? 'bg-coral-red border-2 border-coral-red shadow-lg' 
+          : ' hover:bg-gray-100 border-2 border-transparent'}
+      `}
     >
-      <img src={imageSrc} alt="shoe" className="relative z-10 h-32 w-auto" />
+      <div className="absolute inset-0 bg-white opacity-80 rounded-xl" />
+      <img 
+        src={imageSrc} 
+        alt="shoe thumbnail" 
+        className="relative z-10 h-16 sm:h-20 w-auto object-contain transition-transform duration-300 ease-in-out transform hover:scale-110" 
+      />
     </div>
   );
 };
