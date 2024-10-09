@@ -1,26 +1,30 @@
 import React from "react";
-import  PopularShoeCard  from "../components/PopularShoeCard"
+import PopularShoeCard from "../components/PopularShoeCard";
 import { products } from "../constants";
+
 const PopularProducts = () => {
   return (
-    <section className="w-full flex flex-col min-h-screen gap-10">
-
-      <div className="flex flex-col ml-20 text-pretty">
-        <h1 className="text-4xl font-semibold">
-          Our
-          <span className="text-coral-red"> Popular</span> products
-        </h1>
-        <p className="mt-10 text-xl tracking-wide font-light">
-          Experience top-notch quality and style with our sought-after selections.<br/> Discover a world of Comfort, design and value.
+    <section className="py-16 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-0 max-w-7xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
+          Our <span className="text-coral-red">Popular</span> Products
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
+          Experience top-notch quality and style with our sought-after selections. 
+          Discover a world of comfort, design, and value.
         </p>
       </div>
 
-      <div className="flex gap-x-36 ml-20 mt-10 max-lg:flex-col">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {products.map((product) => (
-          <PopularShoeCard imageSrc={product.imgURL} name={product.name} rating={product.rating} price={product.price}/>
-
+          <PopularShoeCard 
+            key={product.name}
+            imageSrc={product.imgURL} 
+            name={product.name} 
+            rating={product.rating} 
+            price={product.price}
+          />
         ))}
-
       </div>
     </section>
   );
